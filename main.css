@@ -267,3 +267,9 @@ width: 25%;
   flex-direction: row;
   justify-content: space-around;
 }
+.tour-text{
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 20px;
+  text-align: center;
+}
