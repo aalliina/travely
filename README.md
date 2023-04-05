@@ -1,2 +1,2 @@
 # travely
-Trevely
+Travely
