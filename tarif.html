@@ -12,8 +12,11 @@
     <!-- own -->
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3897/3897923.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 </head>
-<body>
+<body ng-app="cityApp">
 <!-- header -->
     <header>
         <div class="container">
@@ -69,69 +72,48 @@
           </div>
         <!-- nav -->
         <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="main.html">Головна</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Про нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tours.html">Вибір</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tarif.html">Тарифи</a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="main.html">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Про нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tours.html">Вибір</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tarif.html">Тарифи</a>
+            </li>
+          </ul>
       <!-- nav -->
     </header> 
 <!-- header -->
-<!-- main info -->
- <h1 style="text-align: center;">Про нас</h1> <br>
 <div class="main-page">
- 
-<div class="m">
-  <div class="n">
-<img src="https://abrakadabra.fun/uploads/posts/2022-02/1644935568_18-abrakadabra-fun-p-oboi-na-smartfon-vertikalnie-priroda-30.jpg" width="500px"  alt="photo">
-  </div>
-  <div class="n">
-    <hr>
-<p><b>Travely</b> - це туроператор. Ми організовуємо подорожі по Європі, США та Україні.
-
-    Наше основне завдання організувати вашу подорож так, щоб ви змогли ознайомитися з культурою, визначними місцями країн світу та відпочити від буденності.
-    
-    Наш пріоритет – людяність, ваша безпека та комфорт.
-    
-    Плануєте подорожувати з нами вперше? Тут ми розкажемо, як все працює. <br>
-  <br>
-  Хочеться подорожувати, але карантин вносить свої корективи? Ми запевняємо, що за новими враженнями не обов’язково їхати закордон. Пропонуємо підбірку небанальних маршрутів Україною, якими ви втамуєте жагу до подорожей  <br><br>
-  Тури по Україні: більше 300 екскурсійних программ. Серед них: групові та індивідуальні тури по Україні, збірні тури з фіксованими датами, тури вихідного дня, тури для дітей та дорослих, романтичні і активні тури, кулінарні та тури в етнічному стилі... Туризм в Україні шалено розвивається, і ми раді внести свій вклад у цей процес! Обирайте екскурсії по Україні, пізнавайте свою країну і закохуйтесь у неї все сильніше! <br><br>
-  Екскурсійні тури Україною на цій сторінці весь час оновлюються, зміщуються згідно зміні пір року і наближенню нового туристичного сезону.
-
- <br><br>
-  </p>
-  </div> 
-</div>
-<!--  -->
-<hr>
- 
- <h1 style="text-align: center;">Контактні дані</h1 > <br>
-<div class="text">
-  <div class="box">
-    <h2 >Телефон</h2>
-    <p> +380 98 000 0000</p>
-</div> 
-<div class="box">
-    <h2>Адреса</h2>
-    <p>Україна, Дніпро <br>  Вулиця Європейська 1</p>
-</div>
-<div class="box">
-    <h2>Пошта</h2>
-    <p>name@example.com</p>
-</div>
-</div> <br>
-
-</div>
-<!-- main info -->
+<div class="main-city">
+<h1 style="text-align: center;">
+    Тарифи
+</h1>
+    <script type="text/ng-template" id="animate-project.html">
+        <h2>Місто: {{city.name}}</h2>
+        <p>Країна: {{city.country}}</p>
+        <p>Кількість днів: {{city.year}}</p>
+        <p>Ціна: {{city.population}}</p>
+    </script>
+    <h1 style="text-align: center;">Найбільші міста України</h1>
+    <ul class="tarif-list" style="text-align: center;">
+        <li><a href="#!/kyiv">Київ</a></li>
+        <li><a href="#!/kharkiv">Харьків</a></li>
+        <li><a href="#!/odesa">Одеса</a></li>
+        <li><a href="#!/dnipro">Дніпро</a></li>
+        <li><a href="#!/zp">Запоріжжя</a></li>
+        <li><a href="#!/lviv">Львів</a></li>
+    </ul>
+    <div class="city-container">
+        <div class="city-view" ng-view></div>
+    </div>
+    <script src="tarif.js"></script>
+</div></div>
+<br><br><br>
 <!-- footer -->
 <div class="footer-clean">
   <footer>
@@ -146,10 +128,10 @@
               <div class="col-sm-4 col-md-3 item">
                   <h3>Навигація</h3>
                   <ul>
-                    <li><a href="main.html">Головна</a></li>
-                    <li><a href="index.html">Про нас</a></li>
-                    <li><a href="tours.html">Вибір</a></li>
-                    <li><a href="tarif.html">Тарифи</a></li>
+                      <li><a href="main.html">Головна</a></li>
+                      <li><a href="index.html">Про нас</a></li>
+                      <li><a href="tours.html">Вибір</a></li>
+                      <li><a href="tarif.html">Тарифи</a></li>
                   </ul>
               </div>
               <div class="col-sm-4 col-md-3 item">

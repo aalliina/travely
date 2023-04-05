@@ -209,3 +209,61 @@ width: 25%;
     width: 100%;
 }
 
+.city-container{
+  position: relative;
+  margin: 10px 20px;
+}
+.city-view{
+  padding: 10px;
+}
+.city-view.ng-animate{
+  transition: all ease 0.8s;
+  position: relative;
+}
+.city-view.ng-enter{
+  top: 50px;
+  opacity: 0;
+}
+.city-view.ng-leave,
+.city-view.ng-enter.ng-enter-active{
+  top: 0;
+  opacity: 1;
+}
+.city-view.ng-leave.ng-leave-active{
+  top: -200px;
+  opacity: 0;
+}
+.main-city{
+  margin: auto;
+  width: 50%;
+}
+.tarif-list{
+  padding: 0;
+  margin-top: 40px;
+  font-size: 1.1em;
+}
+.tarif-list  li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 2px 0;
+  background-color: rgba(92, 129, 126, 0.486);
+  border-radius: 5px;
+}
+.tarif-list li a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.myform{
+  text-align: center;
+    font-size: larger;
+    color: black;
+    font-size: larger;
+}
+.img{
+  padding: 10px;
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  justify-content: space-around;
+}
